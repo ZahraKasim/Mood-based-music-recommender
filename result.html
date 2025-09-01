@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Songs</title>
+</head>
+<body>
+    <h2>Mood detected: {{ mood.capitalize() }}</h2>
+    <h3>🎵 Recommended Songs:</h3>
+    <ul>
+        {% for song in songs %}
+            <li>{{ song[0] }} by {{ song[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood-Based Music Recommender</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+    input, button { padding: 10px; margin: 10px; }
+    .songs { margin-top: 20px; }
+  </style>
+</head>
+
+<body>
+
+  <h1>🎵 Mood-Based Music Recommender</h1>
+  <form id="artistForm">
+    <input type="text" name="artist" placeholder="Enter Artist Name" required>
+    <button type="submit">Get Recommendations</button>
+  </form>
+
+  <h2 id="moodResult"></h2>
+  <div class="songs" id="songsList"></div>
+
+  <script>
+    document.getElementById("artistForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      let formData = new FormData(this);
+
+      document.getElementById("moodResult").innerText = "📸 Detecting mood...";
+      document.getElementById("songsList").innerHTML = "";
+
+      let response = await fetch("/recommend", {
+        method: "POST",
+        body: formData
+      });
+
+      let data = await response.json();
+
+      if (data.error) {
+        document.getElementById("moodResult").innerText = data.error;
+      } else {
+        document.getElementById("moodResult").innerText = "😊 Mood Detected: " + data.mood;
+        let listHTML = "<h3>Recommended Songs:</h3><ul>";
+        data.songs.forEach(song => {
+          listHTML += `<li>${song.track} by ${song.artist}</li>`;
+        });
+        listHTML += "</ul>";
+        document.getElementById("songsList").innerHTML = listHTML;
+      }
+    });
+  </script>
+</body>
+</html>
