@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood-Based Music Recommender</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+    input, button { padding: 10px; margin: 10px; }
+    .songs { margin-top: 40px; }
+  </style>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="head_section">
+        <h1><i>VibeMatch</i></h1>
+
+        <div class="playlists">
+            <h4 class="active"><span></span><i class="bi bi-music-note-beamed"></i>Playlist</h4>
+            <h4><span></span><i class="bi bi-clock-history"></i>Recents</h4>
+            <h4><span></span><i class="bi bi-heart-fill"></i>Favourites</h4>
+        </div>
+
+        <div class="song_menu">
+
+            <li class="songs">
+                <span>01</span>
+                <img src="../static/1st-song.jpg" alt="Aditya Rikhari">
+                <h5>
+                    Sahiba
+                    <div class="subtitle">Aditya Rikhari</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+            </li>
+
+            <li class="songs">
+                <span>02</span>
+                <img src="../static/1st-song.jpg" alt="Aditiya Rikhari">
+                <h5>
+                    Sahiba
+                    <div class="subtitle">Aditya Rikhari</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+            </li>
+
+            <li class="songs">
+                <span>03</span>
+                <img src="../static/1st-song.jpg" alt="Aditiya Rikhari">
+                <h5>
+                    Sahiba
+                    <div class="subtitle">Aditya Rikhari</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+            </li>
+
+            <li class="songs">
+                <span>04</span>
+                <img src="../static/1st-song.jpg" alt="Aditiya Rikhari">
+                <h5>
+                    Sahiba
+                    <div class="subtitle">Aditya Rikhari</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+            </li>
+
+            <li class="songs">
+                <span>05</span>
+                <img src="../static/1st-song.jpg" alt="Aditiya Rikhari">
+                <h5>
+                    Sahiba
+                    <div class="subtitle">Aditya Rikhari</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+            </li>
+
+            <li class="songs">
+                <span>06</span>
+                <img src="../static/1st-song.jpg" alt="Aditiya Rikhari">
+                <h5>
+                    Sahiba
+                    <div class="subtitle">Aditya Rikhari</div>
+                </h5>
+                <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+            </li>
+
+        </div>
+
+    </div>
+
+
+    <div class="song_section"></div>
+
+
+    <div class="main_controls">
+        <div class="pulse">
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+        <img src="../static/1st-song.jpg" alt="Aditiya Rikhari">
+        <h5>Sahiba
+            <div class="subtitle">Aditya Rikhari</div>
+        </h5>
+        <div class="control_icons">
+                <i class="bi bi-skip-start-fill"></i>
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-skip-end-fill"></i>
+        </div>
+        <span id="start">0:00</span>
+        <div class="music_bar">
+            <input type="range" id="bar" min="0" value="0" max="100">
+            <div class="bar1" id="bar1"></div>
+            <div class="point"></div>
+        </div>
+        <span id="end">0:00</span>
+    </div>
+
+  </header>
+
+
+
+</body>
+</html>

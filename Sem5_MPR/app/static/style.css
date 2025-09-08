@@ -1,0 +1,378 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #131312;
+  font-family: "Poppins", sans-serif;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+header {
+  width: 85%;
+  height: 95%;
+  border: 1px #fff;
+  display: flex;
+  flex-wrap:wrap;
+  /*border:1px solid #fff;*/
+  overflow: hidden;
+}
+
+header .head_section, .song_section{
+  font-size: 30px;
+  position: relative;
+  width: 25%;
+  height: 90%;
+  /*border: 1px solid #fff;Z*/
+  background-color: #111727;
+  color:#fff;
+}
+
+/*rightarea*/
+header .song_section{
+  width:75%;
+  background: #0b1320;
+  /*border:1px solid #fff;*/
+
+}
+
+/*maincontrol*/
+header .main_controls{
+  width: 100%;
+  height: 10%;
+  background-color: #111727;
+  /*border:1px solid #fff;*/
+  box-shadow: 100px 100px 150px #03060e;
+}
+
+/*appname*/
+header .head_section h1{
+  display:block;
+  inline-size: 50%;
+  block-size: 6%;
+  border-radius: 100px;
+  background-color: #0b101e;
+  font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  color: #FFF;
+  padding-top: 10px;
+  margin: 25px 0 0 20px;
+  box-shadow: 0 5px 20px #090f1f;
+  /*border:1px solid #fff;*/
+
+}
+
+/*playlist section block*/
+header .head_section .playlists{
+    margin: 55px 0 0 30px;
+    text-align: left;
+
+}
+
+/*playlist section text*/
+header .head_section .playlists h4{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    color: #4c5262;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+}
+
+/*playlist text transition*/
+header .head_section .playlists h4:hover{
+    color: #fff;
+}
+
+/*playlist icon*/
+header .head_section .playlists h4 span{
+    position: relative;
+    margin-right: 45px;
+}
+
+/*playlist icon transition*/
+header .head_section .playlists h4 span::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    transition: .3s linear;
+}
+
+header .head_section .playlists h4:hover span::before{
+    border: 2px solid #ffffff;
+}
+
+header .head_section .playlists h4 .bi{
+    display:none;
+}
+
+/*playlist section on click*/
+header .head_section .playlists .active{
+    color: #36e2ec;
+}
+header .head_section .playlists .active span{
+    display: none;
+}
+
+header .head_section .playlists .active .bi{
+    display: flex;
+    margin-right: 27px;
+}
+
+/*song menu block*/
+header .head_section .song_menu{
+    width: 100%;
+    height: 486px;
+    /*border: 1px solid #fff;*/
+    margin-top: 40px;
+    padding-top: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/*song menu text list box*/
+header .head_section .song_menu li{
+    position: relative;
+    list-style: none;
+    text-align: left;
+    padding: 0 20px;
+    margin: 0;
+    height: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+/*song menu text transition*/
+header .head_section .song_menu li:hover{
+    background: rgb(105, 105, 170, .1);
+    border-radius: 10px;
+}
+
+header .head_section .song_menu li span{
+    font-size: 15px;
+    font-weight: 600;
+    color: #4c5262;
+}
+
+/*song menu music album icon*/
+header .head_section .song_menu li img{
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+/*song menu music name*/
+header .head_section .song_menu li h5{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+/*song menu music creator*/
+header .head_section .song_menu li h5 .subtitle{
+    font-size: 16px;
+    color: #4c5262;
+}
+
+/*song menu play icon*/
+header .head_section .song_menu li .bi{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    font-size: 20px;
+}
+
+/*main control section*/
+header .main_controls {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/*moving pulse icon*/
+header .main_controls .pulse {
+    width: 50px;
+    height: 50px;
+   /*border: 1px solid #fff;*/
+    padding-bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+/*moving pulse img 1*/
+header .main_controls .pulse div {
+    width: 4px;
+    height: 8px;
+    margin-right: 4px;
+    padding-bottom: 15px;
+    border-radius: 10px 10px 0 0;
+    background: #36e2ec;
+    animation: unset;
+    /*border: 1px solid #fff;*/
+}
+
+/*moving pulse img 2*/
+header .main_controls .pulse .pulse2:nth-child(2) {
+    height: 18px;
+   /*animation-delay: .4s;*/
+}
+
+/*moving pulse icon 3*/
+header .main_controls .pulse .pulse3:nth-child(3) {
+    height: 8px;
+    /*animation-delay: .8s;*/
+}
+
+/*USING JAVASCRIPT IN PULSE ICON FOR ANIMATION ON EVENT */
+header .main_controls .active2 div{
+    animation: wave .5s linear infinite;
+}
+
+/*moving pulse icon 2*/
+header .main_controls .active2 .pulse2:nth-child(2) {
+    animation-delay: .4s;
+}
+
+/*moving pulse icon 3*/
+header .main_controls .active2 .pulse3:nth-child(3) {
+    animation-delay: .8s;
+}
+
+
+
+@keyframes wave {
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(3);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+/*currently playing song*/
+header .main_controls img{
+    width: 40px;
+    height: 40px;
+}
+
+/* Song name*/
+header .main_controls h5{
+    width: 130px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: left;
+}
+
+header .main_controls h5 .subtitle{
+    width: 130px;
+    font-size: 12px;
+    color: #4c5262;
+}
+
+/*Pause play buttons*/
+header .main_controls .control_icons{
+    font-size: 30px;
+    color: #fff;
+    margin: 0 20px 0 100px;
+}
+
+header .main_controls .control_icons .bi{
+    cursor: pointer;
+    outline: none;
+    transition: background .3s linear;
+}
+
+/*timestamp*/
+header .main_controls span{
+    color: #fff;
+    width: 35px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+header .main_controls span #start{
+    margin: 0 0 0 20px;
+}
+
+/* music bar section*/
+header .main_controls .music_bar{
+    position: relative;
+    width: 43%;
+    height: 2px;
+    background: rgb(105, 105, 170, .1);
+    margin: 0 15px 0 10px;
+}
+
+header .main_controls .music_bar .bar1{
+    position: absolute;
+    background: #36e2ec;
+    width: 0;
+    height: 100%;
+    top: 0;
+}
+
+/*time indicator dot*/
+header .main_controls .music_bar .point{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #36e2ec;
+    top: -4px;
+    border-radius: 100%;
+    left: 0;
+    transition: 1s linear;
+    cursor: pointer;
+}
+
+/*time indicator dot animation*/
+header .main_controls .music_bar .point::before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    top: -5px;
+    border-radius: 100%;
+    left: -4px;
+    box-shadow: inset 0 0 3px #36e2ec;
+}
+
+/*range input type music bar*/
+header .main_controls .music_bar input{
+    position: absolute;
+    width: 100%;
+    left: -10px;
+    top: -28px;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: 3s linear;
+    opacity: 0;
+}
